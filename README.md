@@ -1,4 +1,4 @@
-# the-stuff
+# Generic Adventure
 A text-based adventure game utilizaing natural language processing and ASCII art.
 
 Executive Summary as submitted:
