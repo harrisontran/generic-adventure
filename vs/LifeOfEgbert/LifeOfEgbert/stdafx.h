@@ -1,3 +1,4 @@
+#pragma once
 // Include Simple DirectMedia Layer Libraries
 #include <SDL.h>
 #include <SDL_image.h>
