@@ -1,4 +1,5 @@
-﻿  Main.cpp
+﻿  SDL_Setup.cpp
+  Main.cpp
   LifeOfEgbert.cpp
   Generating Code...
   LifeOfEgbert.vcxproj -> C:\Users\Harrison Tran\Desktop\LifeOfEgbert\LifeOfEgbert\x64\Debug\LifeOfEgbert.exe

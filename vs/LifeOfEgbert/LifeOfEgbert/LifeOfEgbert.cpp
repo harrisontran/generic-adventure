@@ -6,8 +6,8 @@
 #include "stdafx.h" // Dump of our includes
 #include "Main.h"	// Main.h
 int main(int argc, char *argv[]) {
-	CMain cmain;
-	cmain.GamePersistence();
+	CMain* cmain = new CMain();
+	cmain->GamePersistence();
 
 	return 0;
 }
