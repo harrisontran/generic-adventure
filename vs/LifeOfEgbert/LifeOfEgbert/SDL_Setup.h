@@ -1,7 +1,7 @@
 #pragma once
 class CSDL_Setup {
 public:
-	CSDL_Setup(bool* quit);
+	CSDL_Setup(bool* quit, int screen_width, int screen_height);
 	~CSDL_Setup();
 	SDL_Renderer* getRenderer();
 	SDL_Event* getUpdateEvent();

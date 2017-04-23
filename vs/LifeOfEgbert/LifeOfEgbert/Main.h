@@ -1,19 +1,18 @@
 #pragma once
 #include "SDL_Setup.h"
+#include "Sprite.h"
 
 class CMain {
 public:
-	CMain();
+	CMain(int width, int height);
 	~CMain();
 	void GamePersistence();
 private:
 	bool quit;
-
-	SDL_Texture* grass_texture;
-	SDL_Rect grass_rect;
-	SDL_Texture* user_texture;
-	SDL_Rect user_rect;
-
+	int screen_width;
+	int screen_height;
 	CSDL_Setup* csdl_setup;
+	CSprite* grass;
+	CSprite* user_sprite;
 };
 
