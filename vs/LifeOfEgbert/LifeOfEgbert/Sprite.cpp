@@ -15,15 +15,22 @@ CSprite::CSprite(SDL_Renderer* p_renderer, std::string file_path, int x, int y, 
 	renderer = p_renderer;
 	texture = NULL;
 	texture = IMG_LoadTexture(renderer, file_path.c_str());
-	if (texture == NULL) { std::cout << "Couldn't load " << file_path.c_str() << std::endl; }
+	if (texture == NULL) { std::cout << "Couldn't load " << file_path.c_str() << std::endl; } // Check to ensure load
+	// Set bounds
 	rect.x = x;
 	rect.y = y;
 	rect.w = w;
 	rect.h = h;
 }
+/**
+	Sprite deconstructor
+*/
 CSprite::~CSprite() {
 	SDL_DestroyTexture(texture);
 }
+/**
+	Draws constructor sprite given constructor specs
+*/
 void CSprite::Draw() {
 	SDL_RenderCopy(renderer, texture, NULL, &rect);
 }

@@ -24,8 +24,8 @@ int main(int argc, char *argv[]) {
 	SDL_GetCurrentDisplayMode(0, &DM);
 
 	CMain* cmain = new CMain(800, 600); // Fire up the main class
-	cmain->GamePersistence();	// Keep the game going
-
+	cmain->GamePersistence();			// Keep the game going
+	delete cmain;						// Free up memory
 	return 0;	// Ends the program. That's after persistence runs dry.
 }
 

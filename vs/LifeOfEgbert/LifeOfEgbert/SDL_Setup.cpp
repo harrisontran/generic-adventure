@@ -22,7 +22,7 @@ CSDL_Setup::CSDL_Setup(bool* quit, int screen_width, int screen_height) {
 		For resizeable windows, OR ( | ) a SDL_WINDOW_RESIZEABLE flag
 	*/
 	window = SDL_CreateWindow("Life of Egbert", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 
-		screen_width, screen_height, SDL_WINDOW_SHOWN | SDL_WINDOW_FULLSCREEN);
+		screen_width, screen_height, SDL_WINDOW_SHOWN);
 	// If the window fails, close the program
 	if (window == NULL) {
 		std::cout << "Window could not be created!" << std::endl;

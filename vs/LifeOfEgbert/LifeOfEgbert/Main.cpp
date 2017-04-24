@@ -7,10 +7,12 @@ CMain::CMain(int width, int height) {
 	quit = false;  // Game begins in operation
 	csdl_setup = new CSDL_Setup(&quit, screen_width, screen_height); // Instantitate SDL stuff
 	grass = new CSprite(csdl_setup->getRenderer(),"res/grass.bmp",0,0,800,600);
-	user_sprite = new CSprite(csdl_setup->getRenderer(), "res/usertest.bmp",400,300,50,50);
+	user_sprite = new CSprite(csdl_setup->getRenderer(), "res/usertest.bmp", 400, 300, 50, 50);
 }
 CMain::~CMain() {
-	// Clean up after window close to prevent possible memory leak
+	delete csdl_setup;
+	delete grass;
+	delete user_sprite;
 }
 void CMain::GamePersistence() {
 	// While the window is open, keep the renderer updated (so as to keep the window open)
